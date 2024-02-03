@@ -33,9 +33,12 @@ p {
   line-height: 1.5;
 }
 
+a {
+ text-decoration: none;
+}
 
 section {
- margin-bottom: 42px;
+ margin-bottom: 6rem;
  margin-top: 32px;
 }
 
@@ -95,6 +98,11 @@ animation:
  }
 }
 /* Programming */
+
+.progamming > .container > h1 {
+ margin-bottom: 3rem;
+}
+
 .lesson {
   display: flex;
   justify-content: center; /* Menengahkan kartu-kartu */
@@ -128,12 +136,15 @@ animation:
   .lesson-card {
     flex: 0 0 calc(100% - 40px); /* Lebar kartu menjadi 100% dengan padding yang sudah ditambahkan */
   }
+.progamming {
+ padding-bottom: 6rem;
+}
 }
 
 .lesson-title {
   font-size: 24px;
   color: var(--main);
-  margin-bottom: 10px;
+  margin-bottom: .8rem;
 }
 .lesson-title > i {
  margin-right: 8px;
@@ -273,7 +284,49 @@ animation:
  }
 }
 
+/* footer */
 
-a {
- text-decoration: none;
+footer {
+ background-color: var(--dark);
+ color: white;
+ padding-bottom: 5rem;
+}
+
+.footer h3 {
+ margin-left: 2rem;
+ padding-top: 3rem;
+}
+
+.footer ul  {
+ margin-top: 1rem;
+ margin-left: 2rem;
+ list-style: none;
+}
+.footer li {
+ margin-top: .4rem;
+}
+
+.footer .line {
+ margin-top: 1rem;
+ margin-left: 2rem;
+ background-color: white;
+ width: 80%;
+}
+
+.footer p {
+ margin-left: 2rem;
+ margin-top: .8rem;
+}
+
+.footer p > span {
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 700;
+}
+
+.footer-medsos {
+ margin-left: 2rem;
+}
+.footer-medsos i {
+ font-size: 36px;
+ margin-right: 8px;
 }
