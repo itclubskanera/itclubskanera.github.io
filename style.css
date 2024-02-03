@@ -1,0 +1,279 @@
+/* CSS untuk tampilan halaman */
+ * {
+ padding: 0;
+ margin: 0;
+}
+body  {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+ --main: #1ab3db;
+ --sec: #c4db1a;
+ --dark: #202020;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--main);
+  text-align: center;
+  margin: 20px;
+}
+
+p {
+  color: #666;
+  line-height: 1.5;
+}
+
+
+section {
+ margin-bottom: 42px;
+ margin-top: 32px;
+}
+
+.line {
+ width: 90%;
+ padding-top: 2px;
+ background-color: #333;
+ margin: 32px auto;
+ margin-top: 32px;
+}
+/* hero */
+
+.hero {
+ margin-bottom: 10rem;
+}
+
+.hero-title {
+font-family: 'Helvetica Neue', sans-serif;
+color: var(--dark);
+text-align: start;
+white-space: wrap;
+margin-top: 32px;
+font-size: 2.4rem;
+animation:
+ blink .8s infinite;
+}
+.hero  p {
+ text-align: start;
+ margin-left: 34px;
+ max-width: 80%;
+ margin-top: 32px;
+ margin-bottom: 32px;
+}
+.bungkus {
+ display: inline-block;
+}
+
+.cursor {
+ width: 8px;
+ height: 36px;
+ border-right: .8rem orange;
+ animation:  blink .8 infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+@keyframes blink {
+  from { border-color: transparent }
+  to { border-color: orange; }
+}
+
+@media only screen and (min-width: 768px) {
+ .hero-title {
+  max-width: 80%;
+ }
+}
+/* Programming */
+.lesson {
+  display: flex;
+  justify-content: center; /* Menengahkan kartu-kartu */
+  gap: 20px; /* Menambahkan jarak antara kartu-kartu */
+  flex-wrap: wrap; /* Memastikan bahwa item dapat melibat baris jika tidak cukup ruang */
+}
+
+.lesson-card {
+  margin-bottom: 20px; /* Menambahkan margin di bawah lesson-card */
+  flex: 0 0 calc(33.33% - 20px); /* Menyesuaikan lebar kartu dan memberikan jarak di samping */
+  background-color: #fff;
+  border-radius: 5px;
+  border: #333 1px solid;
+  box-shadow: 8px 8px #3d3d3d;
+  box-sizing: border-box; /* Memastikan bahwa padding tidak mempengaruhi lebar kartu secara keseluruhan */
+  padding: 20px; /* Menambahkan padding pada kartu */
+}
+
+@media only screen and (min-width: 768px) {
+  .lesson {
+    justify-content: space-between; /* Menggunakan space-between agar ada jarak di samping kiri dan kanan */
+  }
+
+  .lesson-card {
+    flex: 0 0 calc(33.33% - 20px); /* Tetap responsif pada tampilan desktop */
+  }
+}
+
+/* Tampilan mobile */
+@media only screen and (max-width: 767px) {
+  .lesson-card {
+    flex: 0 0 calc(100% - 40px); /* Lebar kartu menjadi 100% dengan padding yang sudah ditambahkan */
+  }
+}
+
+.lesson-title {
+  font-size: 24px;
+  color: var(--main);
+  margin-bottom: 10px;
+}
+.lesson-title > i {
+ margin-right: 8px;
+}
+.lesson-description {
+  color: #3e3e3e;
+  font-size: 16px;
+}
+
+.lesson-link {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 16px;
+  width: 100px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: var(--sec);
+}
+
+.lesson-link:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main);
+  padding: 10px 20px;
+  border-bottom: 4px solid var(--sec);
+}
+
+.navbar h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.navbar-links.show {
+  max-height: 200px; /* Sesuaikan dengan tinggi maksimum link Anda */
+  transition: max-height 0.3s ease-in-out;
+}
+
+.navbar-link:hover {
+  background-color: #fff;
+  color: var(--main);
+}
+
+/* style.css */
+
+/* Navbar styles */
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-logo {
+    order: 1;
+    margin-bottom: 10px;
+  }
+
+  .navbar-links {
+    order: 2; /* Menetapkan urutan tautan untuk berada di bawah logo */
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar h2,
+  .navbar-links a {
+    margin: 5px 0;
+  }
+
+  .navbar-toggle {
+   position: absolute;
+   z-index: 10;
+   margin-top: 15px;
+   right: 20px;
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+ .navbar-toggle {
+  display: none;
+ }
+.hero p {
+  text-align: center;
+ }
+}
+
+
+a {
+ text-decoration: none;
+}
